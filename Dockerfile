@@ -148,8 +148,16 @@ RUN gem install fastlane -v 2.129.0 \
   && gem install fastlane-plugin-appicon fastlane-plugin-android_change_string_app_name fastlane-plugin-humanable_build_number \
   && gem update --system "$RUBYGEMS_VERSION"
 
+################################################################################################
+###
+### Install firebase-tools
+###
+
+RUN npm install -g firebase-tools
+
+
 # Remove Build Deps
 RUN apt-get purge -y --auto-remove $buildDeps
 
 # Output versions
-RUN node -v && npm -v && ruby -v && fastlane -v
+RUN node -v && npm -v && ruby -v && fastlane -v && firebase -V
