@@ -10,8 +10,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ### Environment variables
 ###
 # Android & Gradle
-ENV GRADLE_URL http://services.gradle.org/distributions/gradle-3.3-all.zip
-ENV GRADLE_HOME /usr/local/gradle-3.3
+ENV GRADLE_URL https://services.gradle.org/distributions/gradle-6.4.1-all.zip
+ENV GRADLE_HOME /usr/local/gradle-6.4
 ENV ANDROID_SDK_URL http://dl.google.com/android/android-sdk_r24.3.3-linux.tgz
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV ANDROID_SDK_COMPONENTS_LATEST platform-tools,build-tools-23.0.1,build-tools-25.0.3,android-23,android-25,extra-android-support,extra-android-m2repository,extra-google-m2repository
