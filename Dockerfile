@@ -33,6 +33,14 @@ ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zi
     ANDROID_HOME="/usr/local/android-sdk" \
     ANDROID_VERSION=28 \
     ANDROID_BUILD_TOOLS_VERSION=27.0.3
+    
+# Download & Install Gradle
+RUN mkdir $GRADLE_HOME
+RUN cd $GRADLE_HOME
+RUN wget $GRADLE_URL
+RUN unzip gradle-6.4.1-all.zip
+RUN rm gradle-6.4.1-all.zip
+RUN chmod u+x $GRADLE_HOME
 
 # Download Android SDK
 RUN mkdir "$ANDROID_HOME" .android \
